@@ -82,6 +82,12 @@ npm start
 
 `build/solution.js`의 소스코드를 그대로 업로드 하시면 됩니다.
 
+### ⑦ TIP
+
+* 터미널 두 개를 띄우셔서 한 쪽에는 `tsc -w`, 다른 한 쪽에는 `nodemon build/solution.js`를 실행시키시면  
+  소스코드가 수정될때마다 자동으로 테스트를 돌려줘 굉장히 편합니다.
+* 문제를 풀었으면 `solve` 폴더에 백업을 해보세요.
+
 ## Documentation
 
 * [프로젝트 변경 사항](https://github.com/rhea-so/BaekjoonTypescriptTemplate/blob/main/CHANGELOG.md)
