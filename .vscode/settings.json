@@ -19,7 +19,8 @@
     "CONTRIBUTORS.md": true,
     "CONTRIBUTING.md": true,
     "CHANGELOG.md": true,
-    "lib": true
+    "lib": true,
+    "images": true
   },
   "search.exclude": {
     "**/node_modules": true,

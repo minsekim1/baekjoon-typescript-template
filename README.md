@@ -78,6 +78,10 @@ IO.write(`${firstValue + secondValue}`);
 npm start
 ```
 
+#### IO.setDebugMode();를 실행시, 아래 사진처럼 자동으로 테스트까지 해줍니다.
+
+<img src="images/test.png" alt="drawing" width="500"/>
+
 ### ⑥ Baekjoon Online Judge에 소스코드 업로드 
 
 `build/solution.js`의 소스코드를 그대로 업로드 하시면 됩니다.
