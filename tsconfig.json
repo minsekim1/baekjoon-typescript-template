@@ -1,6 +1,7 @@
 {
     "include": [
-        "**/*.ts"
+        "src/**/*.ts",
+        "lib/**/*.ts"
     ],
     "exclude": [
         "coverage/**/*"

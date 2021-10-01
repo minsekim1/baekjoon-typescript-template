@@ -52,7 +52,3 @@ class IO {
 IO.fileName = '/dev/stdin';
 IO.stdout = '';
 IO.pointer = 0;
-IO.setDebugMode();
-const a = IO.readNumber();
-const b = IO.readNumber();
-IO.write(`${a - b}`);
