@@ -1,6 +1,6 @@
 # Baekjoon Typescript Template
 
-`Baekjoon Online Judge`는 Typescript를 제공하지 않습니다.  
+`Baekjoon Online Judge`는 Typescript를 지원하지 않습니다.  
 Typescript로 문제를 풀고, Javascript로 변환해서 제출해야 합니다.  
 
 또, 값 입력 받는 로직이 매번 작성하기에는 굉장히 번거롭습니다.
