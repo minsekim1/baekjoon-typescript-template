@@ -1,44 +1,86 @@
 # Baekjoon Typescript Template
 
-백준 문제 풀때 Typescript로 하고 싶어서 만든 템플릿
+`Baekjoon Online Judge`는 Typescript를 제공하지 않습니다.  
+Typescript로 문제를 풀고, Javascript로 변환해서 제출해야 합니다.  
+
+또, 값 입력 받는 로직이 매번 작성하기에는 굉장히 번거롭습니다.
+
+그래서 제가 이번에 이러한 문제점들을 해결해주는 Template을 작성했습니다.
 
 ## Badges
 
 <!-- Badges -->
-[![CircleCI](https://circleci.com/gh/rhea-so/BaekjoonTypescriptTemplate/tree/main.svg?style=svg)](https://circleci.com/gh/rhea-so/BaekjoonTypescriptTemplate/tree/main)
-[![License](https://img.shields.io/github/license/rhea-so/BaekjoonTypescriptTemplate)](https://raw.githubusercontent.com/rhea-so/BaekjoonTypescriptTemplate/main/LICENSE)
 [![Issues](https://img.shields.io/github/issues/rhea-so/BaekjoonTypescriptTemplate)](https://github.com/rhea-so/BaekjoonTypescriptTemplate/issues)
 [![Pull Request](https://img.shields.io/github/issues-pr/rhea-so/BaekjoonTypescriptTemplate)](https://github.com/rhea-so/BaekjoonTypescriptTemplate/pulls)
 [![Stars](https://img.shields.io/github/stars/rhea-so/BaekjoonTypescriptTemplate)](https://github.com/rhea-so/BaekjoonTypescriptTemplate)
 
-## Configuration & Setup
+## How to use
 
-### Project Cloning
+### ① [Baekjoon Online Judge](https://www.acmicpc.net/problemset)에서 풀고 싶은 문제를 찾습니다.
+
+### ② Project Cloning
 
 ```sh
-git clone https://github.com/rhea-so/BaekjoonTypescriptTemplate
+git clone https://github.com/rhea-so/BaekjoonTypescriptTemplate # or Your Forked Repository URL
 cd BaekjoonTypescriptTemplate
-npm config set registry https://npm.rhea-so.com/
 npm i
 ```
 
-## Build 
+### ③ Input과 Output을 정의
 
-```sh
-tsc
+`data/input.txt`
+
+```txt
+예제 입력
 ```
 
-## Test
+`data/output.txt`
 
-```sh
-npm test
+```txt
+예제 출력
 ```
 
-### Get Test Coverage
+### ④ Code 작성
+
+```typescript
+/// <reference path="../lib/index.ts" />   <- 제가 작성한 라이브러리를 불러오는 코드입니다. IO 기능을 사용할 수 있습니다.
+
+/**
+ * 터미널 입력 값 대신 data/input.txt, data/output.txt을 사용하도록 설정합니다.  
+ * Baekjoon Online Judge에 업로드 할 용도로 빌드하는 경우에는, 아래 코드를 주석 처리 해주셔야 합니다.
+ * 
+ * 터미널을 끝내려면 Ctrl + D를 눌러주세요.
+ */
+IO.setDebugMode();
+
+IO.readNumber(); // 정수 하나를 입력 받습니다.
+IO.readString(); // 문자열 하나를 입력 받습니다. (공백 문자에 의해 분리됨)
+IO.write("String"); // 문자열을 출력합니다.
+IO.writeln("String"); // 문자열을 출력합니다. 맨 마지막에 개행 문자가 항상 붙습니다.
+```
+
+#### 예시
+
+```typescript
+/// <reference path="../lib/index.ts" />
+
+IO.setDebugMode();
+
+const firstValue = IO.readNumber();
+const secondValue = IO.readNumber();
+
+IO.write(`${firstValue + secondValue}`);
+```
+
+### ⑤ Build & Run
 
 ```sh
-npm run coverage
+npm start
 ```
+
+### ⑥ Baekjoon Online Judge에 소스코드 업로드 
+
+`build/solution.js`의 소스코드를 그대로 업로드 하시면 됩니다.
 
 ## Documentation
 

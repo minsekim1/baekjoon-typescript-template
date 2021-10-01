@@ -55,11 +55,11 @@ class IO {
 	}
 
 	public static setDebugMode(): void {
-		IO.fileName = 'debug/input.txt';
+		IO.fileName = 'data/input.txt';
 
 		process.on('exit', (_code) => {
 			const colors = require('colors');
-			const output = require('fs').readFileSync('debug/output.txt').toString();
+			const output = require('fs').readFileSync('data/output.txt').toString();
 
 			if (output === IO.stdout) {
 				console.info('\n' + colors.green('TEST SUCCESS'));
