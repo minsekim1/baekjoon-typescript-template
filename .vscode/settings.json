@@ -11,7 +11,15 @@
     ".nyc_output": true,
     ".circleci": true,
     "coverage": true,
-    "shell-script": true
+    "shell-script": true,
+    "ROADMAP.md": true,
+    "README.md": true,
+    "package.json": true,
+    "LICENSE": true,
+    "CONTRIBUTORS.md": true,
+    "CONTRIBUTING.md": true,
+    "CHANGELOG.md": true,
+    "lib": true
   },
   "search.exclude": {
     "**/node_modules": true,

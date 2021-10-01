@@ -1,18 +1,16 @@
 {
     "include": [
-        "src/**/*.ts"
-	],
-	"exclude": [
-		"coverage/**/*"
-	],
+        "**/*.ts"
+    ],
+    "exclude": [
+        "coverage/**/*"
+    ],
     "compilerOptions": {
-        "outDir": "dist",
-		"baseUrl": "src",
-        "module": "commonjs",
+        "outFile": "build/solution.js",
+        "baseUrl": "src",
         "target": "es2017",
-        "sourceMap": true,
+        "sourceMap": false,
         "allowJs": false,
-        "moduleResolution": "node",
         "forceConsistentCasingInFileNames": true,
         "noImplicitReturns": true,
         "noImplicitAny": false,
@@ -20,12 +18,12 @@
         "noFallthroughCasesInSwitch": true,
         "strictNullChecks": true,
         "noUnusedLocals": true,
-        "removeComments": false,
+        "removeComments": true,
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
         "listFiles": false,
         "esModuleInterop": true,
         "noStrictGenericChecks": false,
-        "declaration": true
-	}
+        "declaration": false
+    }
 }
